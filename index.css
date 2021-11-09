@@ -1,0 +1,94 @@
+.box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+
+.basic-box{
+    border-radius: 10px;
+    width: 2rem;
+    height: 2rem;
+    margin: 5px;
+    display: inline-block;
+}
+
+.sample-box{
+    background-color: gray;
+    transition: 1s all;
+}
+
+.sample-box:hover{
+    background-color: lightgray;
+}
+
+.flag{
+    background:url('media/flag.svg') no-repeat center center darkgray;
+    background-size: 1rem 1rem;
+    transition: 1s all;
+
+}
+
+.flag:hover{
+    background-color: lightgray;
+}
+
+.empty-field{
+    background-color: lightblue;
+    text-align: center;
+    
+}
+
+.bomb{
+    background: url('media/mine.svg') no-repeat center center whitesmoke;
+    background-size: 1.5rem 1.5rem;
+}
+
+.bomb-exploded{
+    background: url('media/exploded.svg') no-repeat center center whitesmoke;
+    background-size: 1.5rem 1.5rem;
+}
+
+.bomb-1{
+    background: url('media/1mines.svg') no-repeat center center whitesmoke;
+    background-size: 1.5rem 1.5rem;
+}
+
+.bomb-2{
+    background: url('media/2mines.svg') no-repeat center center whitesmoke;
+    background-size: 1.5rem 1.5rem;
+}
+
+.bomb-3{
+    background: url('media/3mines.svg') no-repeat center center whitesmoke;
+    background-size: 1.5rem 1.5rem;
+}
+
+.bomb-4{
+    background: url('media/4mines.svg') no-repeat center center whitesmoke;
+    background-size: 1.5rem 1.5rem;
+}
+
+.bomb-5{
+    background: url('media/5mines.svg') no-repeat center center whitesmoke;
+    background-size: 1.5rem 1.5rem;
+}
+
+.bomb-6{
+    background: url('media/6mines.svg') no-repeat center center whitesmoke;
+    background-size: 1.5rem 1.5rem;
+}
+
+.bomb-7{
+    background: url('media/7mines.svg') no-repeat center center whitesmoke;
+    background-size: 1.5rem 1.5rem;
+}
+
+.bomb-8{
+    background: url('media/8mines.svg') no-repeat center center whitesmoke;
+    background-size: 1.5rem 1.5rem;
+}
