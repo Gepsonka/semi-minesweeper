@@ -22,9 +22,18 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     opacity: 0.3;
-    font-size: 15rem;
     z-index: -100;
+}
+
+#flags{
+    font-size: 15rem;
+    margin-bottom: 30px;
+}
+
+#timer{
+    font-size: 7rem;
 }
 
 #end-of-game-lose{

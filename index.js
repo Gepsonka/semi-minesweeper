@@ -1,6 +1,7 @@
-var sweeperMap=[]
-var numberOfMines=8
+var sweeperMap=[] // logcal map of the mines
+var numberOfMines=8 // you can change it to make the game a bit more easier
 var flagsUsed=0
+const timer = document.getElementById('timer');
 const boxContainer = document.getElementById('box-container')
 const endOfGameLose = document.getElementById('end-of-game-lose')
 const endOfGameWin = document.getElementById('end-of-game-win')
@@ -14,7 +15,7 @@ newGameWinBtn.addEventListener('click',()=>{
     endOfGameWin.classList.add('no-display')
     initGame()
 })
-const flagCounter=document.getElementById('flag-counter')
+const flagCounter=document.getElementById('flags')
 flagCounter.innerHTML=`Flags:${numberOfMines}`
 
 
@@ -27,6 +28,9 @@ function initGame(){
     fillUpMinefield()
     calcBombAround()
     renderMinefield()
+    startTimer()
+    resetTimer() 
+    startTimer()
 }
 
 function initMap(){
@@ -125,10 +129,14 @@ function revealAllBombs(){
 
 function Lose(){
     endOfGameLose.classList.remove('no-display')
+    stopTimer()
 }
 
 function Win(){
     endOfGameWin.classList.remove('no-display')
+    stopTimer()
+    let timeResult=document.getElementById('time-result')
+    timeResult.innerHTML=timer.innerHTML
 }
 
 function cellClicked(y,x){
@@ -194,5 +202,64 @@ function placeFlag(y,x){
 }
 
 
+// rest of it was copy from stack owerflow
+
+
+var hr = 0;
+var min = 0;
+var sec = 0;
+var stoptime = true;
+
+function startTimer() {
+  if (stoptime == true) {
+        stoptime = false;
+        timerCycle();
+    }
+}
+function stopTimer() {
+  if (stoptime == false) {
+    stoptime = true;
+  }
+}
+
+function timerCycle() {
+    if (stoptime == false) {
+    sec = parseInt(sec);
+    min = parseInt(min);
+    hr = parseInt(hr);
+
+    sec = sec + 1;
+
+    if (sec == 60) {
+      min = min + 1;
+      sec = 0;
+    }
+    if (min == 60) {
+      hr = hr + 1;
+      min = 0;
+      sec = 0;
+    }
+
+    if (sec < 10 || sec == 0) {
+      sec = '0' + sec;
+    }
+    if (min < 10 || min == 0) {
+      min = '0' + min;
+    }
+    if (hr < 10 || hr == 0) {
+      hr = '0' + hr;
+    }
+
+    timer.innerHTML = hr + ':' + min + ':' + sec;
+
+    setTimeout("timerCycle()", 1000);
+  }
+}
+
+function resetTimer() {
+    timer.innerHTML = '00:00:00'; // FIXME: dunno why it does not work
+                                  // UPDATE: works...you just have to start the timer before resetting
+}
+// till here
 
 initGame()
