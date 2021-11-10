@@ -259,6 +259,9 @@ function timerCycle() {
 function resetTimer() {
     timer.innerHTML = '00:00:00'; // FIXME: dunno why it does not work
                                   // UPDATE: works...you just have to start the timer before resetting
+    hr=0
+    min=0
+    sec=0
 }
 // till here
 
