@@ -1,3 +1,7 @@
+.no-display{
+    display: none !important; 
+}
+
 .box{
     position: absolute;
     top: 50%;
@@ -6,6 +10,88 @@
     border: 1px solid gray;
     border-radius: 10px;
     padding: 5px;
+}
+
+
+#flag-counter{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.3;
+    font-size: 15rem;
+    z-index: -100;
+}
+
+#end-of-game-lose{
+    font-family: 'Courier New', Courier, monospace;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.8);
+    font-size: x-large;
+    color: white;
+    text-align: center;
+    transition: 1s all;
+}
+
+#end-of-game-lose > div{
+    margin: 20px;
+}
+
+#end-of-game-lose > button{
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 7px;
+    background-color: whitesmoke;
+}
+
+#end-of-game-lose > button:hover{
+    color: white;
+    background-color: black;
+}
+
+#end-of-game-win{
+    font-family: 'Courier New', Courier, monospace;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.8);
+    font-size: x-large;
+    text-align: center;
+    transition: 1s all;
+}
+
+#end-of-game-win > div{
+    margin: 20px;
+}
+
+#end-of-game-win > button{
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 7px;
+    background-color: whitesmoke;
+}
+
+#end-of-game-win > button:hover{
+    color: white;
+    background-color: black;
 }
 
 
@@ -29,7 +115,6 @@
 .flag{
     background:url('media/flag.svg') no-repeat center center darkgray;
     background-size: 1rem 1rem;
-    transition: 1s all;
 
 }
 
