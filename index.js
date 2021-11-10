@@ -1,5 +1,5 @@
 var sweeperMap=[]
-var numberOfMines=2
+var numberOfMines=8
 var flagsUsed=0
 const boxContainer = document.getElementById('box-container')
 const endOfGameLose = document.getElementById('end-of-game-lose')
